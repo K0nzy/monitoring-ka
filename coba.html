@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Monitoring KA DAOP 6</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 36px;
+      color: #007bff;
+    }
+
+    #jam-sekarang {
+      font-size: 40px;
+      font-weight: bold;
+      margin: 10px 0 30px 0;
+    }
+
+    #container-pemberitahuan {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .notifikasi {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      padding: 12px 20px;
+      border-left: 6px solid;
+      border-radius: 8px;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 40px;
+      font-weight: 500;
+      background-color: #fff;
+      white-space: normal;
+      box-sizing: border-box;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+      max-width: 90vw;
+    }
+
+    .datang {
+      border-left-color: #dc3545;
+      background-color: #fdeaea;
+    }
+
+    .berangkat {
+      border-left-color: #28a745;
+      background-color: #e7f9ee;
+    }
+
+    .langsung {
+      border-left-color: #007bff;
+      background-color: #e6f0ff;
+    }
+
+    .keterangan {
+      font-size: 40px;
+      font-weight: 400;
+      color: #555;
+      margin-top: 4px;
+    }
+
+    .fade-in {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .fade-out {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @media (max-width: 600px) {
+      .notifikasi {
+        font-size: 16px;
+        padding: 12px 16px;
+      }
+
+      .keterangan {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Monitoring KA DAOP 6 Kutoarjo - Solo</h1>
+  <div id="jam-sekarang">--:--:--</div>
+  <div id="container-pemberitahuan"></div>
+
+  <script>
+    const container = document.getElementById("container-pemberitahuan");
+    const jamDisplay = document.getElementById("jam-sekarang");
+    const sudahTampil = new Set();
+    let semuaData = {};
+
+    function pad(n) {
+      return n.toString().padStart(2, '0');
+    }
+
+    function tampilkanJam() {
+      const now = new Date();
+      jamDisplay.textContent = `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+    }
+
+    function buatNotifikasi(pesan, tipe, keterangan = "") {
+      const div = document.createElement("div");
+      div.className = `notifikasi ${tipe}`;
+
+      const isiPesan = document.createElement("div");
+      isiPesan.textContent = pesan;
+      div.appendChild(isiPesan);
+
+      if (keterangan.trim()) {
+        const ket = document.createElement("div");
+        ket.className = "keterangan";
+        ket.textContent = keterangan;
+        div.appendChild(ket);
+      }
+
+      container.appendChild(div);
+
+      setTimeout(() => div.classList.add("fade-in"), 10);
+      setTimeout(() => {
+        div.classList.remove("fade-in");
+        div.classList.add("fade-out");
+      }, 60000);
+      setTimeout(() => {
+        container.removeChild(div);
+      }, 62000);
+    }
+
+    function cekNotifikasi() {
+      const now = new Date();
+      const jam = now.getHours();
+      const menit = now.getMinutes();
+
+      for (const [stasiun, jadwalList] of Object.entries(semuaData)) {
+        jadwalList.forEach(item => {
+          const datangLangsung = item.datang === "0";
+          const datangValid = item.datang !== "-" && item.datang !== "0";
+          const berangkatValid = item.berangkat !== "-";
+
+          const [jamD, menitD] = datangValid ? item.datang.split(/[:.]/).map(Number) : [null, null];
+          const [jamB, menitB] = berangkatValid ? item.berangkat.split(/[:.]/).map(Number) : [null, null];
+
+          const kunciDatang = `${stasiun}-${item.ka}-datang`;
+          const kunciBerangkat = `${stasiun}-${item.ka}-berangkat`;
+          const kunciLangsung = `${stasiun}-${item.ka}-langsung`;
+
+          if (datangValid && jam === jamD && menit === menitD && !sudahTampil.has(kunciDatang)) {
+            const pesan = `${stasiun} KA ${item.ka} datang ${item.datang}`;
+            buatNotifikasi(pesan, "datang", item.keterangan || "");
+            sudahTampil.add(kunciDatang);
+          }
+
+          if (datangLangsung && berangkatValid && jam === jamB && menit === menitB && !sudahTampil.has(kunciLangsung)) {
+            const pesan = `${stasiun} KA ${item.ka} langsung ${item.berangkat}`;
+            buatNotifikasi(pesan, "langsung", item.keterangan || "");
+            sudahTampil.add(kunciLangsung);
+          }
+
+          if (!datangLangsung && berangkatValid && jam === jamB && menit === menitB && !sudahTampil.has(kunciBerangkat)) {
+            const pesan = `${stasiun} KA ${item.ka} berangkat ${item.berangkat}`;
+            buatNotifikasi(pesan, "berangkat", item.keterangan || "");
+            sudahTampil.add(kunciBerangkat);
+          }
+        });
+      }
+    }
+
+    async function mulai() {
+      try {
+        const res = await fetch("jadwal.json");
+        semuaData = await res.json();
+        tampilkanJam();
+        setInterval(() => {
+          tampilkanJam();
+          cekNotifikasi();
+        }, 1000);
+      } catch (err) {
+        console.error("Gagal memuat jadwal:", err);
+      }
+    }
+
+    mulai();
+  </script>
+</body>
+</html>
