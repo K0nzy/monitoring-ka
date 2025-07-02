@@ -245,7 +245,7 @@
           if (datangValid && jam === jamD && menit === menitD && !sudahTampil.has(kunciDatang)) {
             sudahTampil.add(kunciDatang);
             batch.push({
-              pesan: `${stasiun} KA ${item.ka} datang ${item.datang}`,
+              pesan: `⬇️ ${stasiun} KA ${item.ka} datang ${item.datang}`,
               tipe: "datang",
               keterangan: item.keterangan || "",
             });
@@ -254,7 +254,7 @@
           if (datangLangsung && berangkatValid && jam === jamB && menit === menitB && !sudahTampil.has(kunciLangsung)) {
             sudahTampil.add(kunciLangsung);
             batch.push({
-              pesan: `${stasiun} KA ${item.ka} langsung ${item.berangkat}`,
+              pesan: `➡️ ${stasiun} KA ${item.ka} langsung ${item.berangkat}`,
               tipe: "langsung",
               keterangan: item.keterangan || "",
             });
@@ -263,7 +263,7 @@
           if (!datangLangsung && berangkatValid && jam === jamB && menit === menitB && !sudahTampil.has(kunciBerangkat)) {
             sudahTampil.add(kunciBerangkat);
             batch.push({
-              pesan: `${stasiun} KA ${item.ka} berangkat ${item.berangkat}`,
+              pesan: `⬆️ ${stasiun} KA ${item.ka} berangkat ${item.berangkat}`,
               tipe: "berangkat",
               keterangan: item.keterangan || "",
             });
