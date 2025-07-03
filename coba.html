@@ -180,7 +180,6 @@
       const detikSekarang = now.getSeconds();
       const tungguSampai59 = (59 - detikSekarang) * 1000;
 
-      // Urutkan berdasarkan urutan: datang → langsung → berangkat
       const urutan = { datang: 1, langsung: 2, berangkat: 3 };
       batch.sort((a, b) => urutan[a.tipe] - urutan[b.tipe]);
 
@@ -189,7 +188,7 @@
         div.className = `notifikasi ${tipe}`;
 
         const isiPesan = document.createElement("div");
-        isiPesan.textContent = pesan;
+        isiPesan.innerHTML = pesan;
         div.appendChild(isiPesan);
 
         if (keterangan.trim()) {
@@ -199,7 +198,6 @@
           div.appendChild(ket);
         }
 
-        // GUNAKAN appendChild AGAR URUTAN SESUAI
         container.appendChild(div);
         setTimeout(() => div.classList.add("fade-in"), 10);
 
@@ -245,7 +243,7 @@
           if (datangValid && jam === jamD && menit === menitD && !sudahTampil.has(kunciDatang)) {
             sudahTampil.add(kunciDatang);
             batch.push({
-              pesan: `⬇️ ${stasiun} KA ${item.ka} datang ${item.datang}`,
+              pesan: `⬇️ ${stasiun} KA ${item.ka} <i>datang</i> ${item.datang}`,
               tipe: "datang",
               keterangan: item.keterangan || "",
             });
@@ -254,7 +252,7 @@
           if (datangLangsung && berangkatValid && jam === jamB && menit === menitB && !sudahTampil.has(kunciLangsung)) {
             sudahTampil.add(kunciLangsung);
             batch.push({
-              pesan: `➡️ ${stasiun} KA ${item.ka} langsung ${item.berangkat}`,
+              pesan: `➡️ ${stasiun} KA ${item.ka} <i>langsung</i> ${item.berangkat}`,
               tipe: "langsung",
               keterangan: item.keterangan || "",
             });
@@ -263,7 +261,7 @@
           if (!datangLangsung && berangkatValid && jam === jamB && menit === menitB && !sudahTampil.has(kunciBerangkat)) {
             sudahTampil.add(kunciBerangkat);
             batch.push({
-              pesan: `⬆️ ${stasiun} KA ${item.ka} berangkat ${item.berangkat}`,
+              pesan: `⬆️ ${stasiun} KA ${item.ka} <i>berangkat</i> ${item.berangkat}`,
               tipe: "berangkat",
               keterangan: item.keterangan || "",
             });
@@ -304,7 +302,7 @@
           if (datangValid && jam === jamD && menit === menitD && detik < 59 && !sudahTampil.has(kunciDatang)) {
             sudahTampil.add(kunciDatang);
             batch.push({
-              pesan: `⬇️ ${stasiun} KA ${item.ka} datang ${item.datang}`,
+              pesan: `⬇️ ${stasiun} KA ${item.ka} <i>datang</i> ${item.datang}`,
               tipe: "datang",
               keterangan: item.keterangan || "",
             });
@@ -313,7 +311,7 @@
           if (datangLangsung && berangkatValid && jam === jamB && menit === menitB && detik < 59 && !sudahTampil.has(kunciLangsung)) {
             sudahTampil.add(kunciLangsung);
             batch.push({
-              pesan: `➡️ ${stasiun} KA ${item.ka} langsung ${item.berangkat}`,
+              pesan: `➡️ ${stasiun} KA ${item.ka} <i>langsung</i> ${item.berangkat}`,
               tipe: "langsung",
               keterangan: item.keterangan || "",
             });
@@ -322,7 +320,7 @@
           if (!datangLangsung && berangkatValid && jam === jamB && menit === menitB && detik < 59 && !sudahTampil.has(kunciBerangkat)) {
             sudahTampil.add(kunciBerangkat);
             batch.push({
-              pesan: `⬆️ ${stasiun} KA ${item.ka} berangkat ${item.berangkat}`,
+              pesan: `⬆️ ${stasiun} KA ${item.ka} <i>berangkat</i> ${item.berangkat}`,
               tipe: "berangkat",
               keterangan: item.keterangan || "",
             });
@@ -340,7 +338,7 @@
         const res = await fetch("jadwal.json");
         semuaData = await res.json();
         tampilkanJam();
-        periksaNotifikasiSegeraSaatMuat(); // ← Menampilkan langsung jika waktunya pas
+        periksaNotifikasiSegeraSaatMuat();
         setInterval(() => {
           tampilkanJam();
           prosesNotifikasiSaatIni();
