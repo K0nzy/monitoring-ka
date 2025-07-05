@@ -105,7 +105,13 @@
     { "ka": "507 CL Prameks (YK-KTA)", "datang": "19:03", "berangkat": "-", "keterangan": "" },
     { "ka": "508 CL Prameks (KTA-YK)", "datang": "-", "berangkat": "05:10", "keterangan": "" },
     { "ka": "509 CL Prameks (YK-KTA)", "datang": "17:20", "berangkat": "-", "keterangan": "" },
-    { "ka": "510 CL Prameks (KTA-YK)", "datang": "-", "berangkat": "18:45", "keterangan": "" }
+    { "ka": "510 CL Prameks (KTA-YK)", "datang": "-", "berangkat": "18:45", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "01:36", "berangkat": "01:41", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "06:16", "berangkat": "06:21", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "23:46", "berangkat": "00:06", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "16:04", "berangkat": "16:09", "keterangan": "" },
+    { "klb": "KP/7037A Tambahan YK-GMR (YK-GMR)", "datang": "19:12", "berangkat": "19:17", "keterangan": "" },
+    { "klb": "KP/7038A Tambahan YK-GMR (GMR-YK)", "datang": "12:58", "berangkat": "13:00", "keterangan": "" }
   ],
   "[JENAR]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "0", "berangkat": "13:30", "keterangan": "" },
@@ -213,7 +219,13 @@
     { "ka": "507 CL Prameks (YK-KTA)", "datang": "18:50", "berangkat": "18:51", "keterangan": "" },
     { "ka": "508 CL Prameks (KTA-YK)", "datang": "05:22", "berangkat": "05:23", "keterangan": "" },
     { "ka": "509 CL Prameks (YK-KTA)", "datang": "17:06", "berangkat": "17:07", "keterangan": "" },
-    { "ka": "510 CL Prameks (KTA-YK)", "datang": "18:57", "berangkat": "18:58", "keterangan": "" }
+    { "ka": "510 CL Prameks (KTA-YK)", "datang": "18:57", "berangkat": "18:58", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "0", "berangkat": "01:25", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "0", "berangkat": "06:32", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "0", "berangkat": "23:36", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "0", "berangkat": "16:20", "keterangan": "" },
+    { "klb": "KP/7037A Tambahan YK-GMR (YK-GMR)", "datang": "0", "berangkat": "19:02", "keterangan": "" },
+    { "klb": "KP/7038A Tambahan YK-GMR (GMR-YK)", "datang": "0", "berangkat": "13:08", "keterangan": "" }
   ],
   "[WOJO]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "0", "berangkat": "13:24", "keterangan": "" },
@@ -321,7 +333,13 @@
     { "ka": "507 CL Prameks (YK-KTA)", "datang": "18:41", "berangkat": "18:42", "keterangan": "" },
     { "ka": "508 CL Prameks (KTA-YK)", "datang": "05:31", "berangkat": "05:32", "keterangan": "" },
     { "ka": "509 CL Prameks (YK-KTA)", "datang": "16:57", "berangkat": "16:58", "keterangan": "" },
-    { "ka": "510 CL Prameks (KTA-YK)", "datang": "19:06", "berangkat": "19:07", "keterangan": "" }
+    { "ka": "510 CL Prameks (KTA-YK)", "datang": "19:06", "berangkat": "19:07", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "0", "berangkat": "01:19", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "0", "berangkat": "06:37", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "0", "berangkat": "23:30", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "0", "berangkat": "16:26", "keterangan": "" },
+    { "klb": "KP/7037A Tambahan YK-GMR (YK-GMR)", "datang": "0", "berangkat": "18:56", "keterangan": "" },
+    { "klb": "KP/7038A Tambahan YK-GMR (GMR-YK)", "datang": "0", "berangkat": "13:12", "keterangan": "" }
   ],
   "[YIA]": [
     { "ka": "521 Bandara YIA (YK-YIA)", "datang": "04:59", "berangkat": "-", "keterangan": "" },
@@ -531,7 +549,13 @@
     { "ka": "567 Bandara YIA (YK-YIA)", "datang": "0", "berangkat": "16:22", "keterangan": "" },
     { "ka": "568 Bandara YIA (YIA-YK)", "datang": "0", "berangkat": "17:06", "keterangan": "" },
     { "ka": "569 Bandara YIA (YK-YIA)", "datang": "0", "berangkat": "18:58", "keterangan": "" },
-    { "ka": "570 Bandara YIA (YIA-YK)", "datang": "0", "berangkat": "19:52", "keterangan": "" }
+    { "ka": "570 Bandara YIA (YIA-YK)", "datang": "0", "berangkat": "19:52", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "0", "berangkat": "01:14", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "0", "berangkat": "06:42", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "0", "berangkat": "23:24", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "0", "berangkat": "16:32", "keterangan": "" },
+    { "klb": "KP/7037A Tambahan YK-GMR (YK-GMR)", "datang": "0", "berangkat": "18:51", "keterangan": "" },
+    { "klb": "KP/7038A Tambahan YK-GMR (GMR-YK)", "datang": "0", "berangkat": "13:16", "keterangan": "" }
   ],
   "[WATES]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "0", "berangkat": "13:17", "keterangan": "" },
@@ -689,7 +713,13 @@
     { "ka": "567 Bandara YIA (YK-YIA)", "datang": "16:13", "berangkat": "16:15", "keterangan": "" },
     { "ka": "568 Bandara YIA (YIA-YK)", "datang": "17:13", "berangkat": "17:15", "keterangan": "" },
     { "ka": "569 Bandara YIA (YK-YIA)", "datang": "18:49", "berangkat": "18:51", "keterangan": "" },
-    { "ka": "570 Bandara YIA (YIA-YK)", "datang": "19:59", "berangkat": "20:01", "keterangan": "" }
+    { "ka": "570 Bandara YIA (YIA-YK)", "datang": "19:59", "berangkat": "20:01", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "0", "berangkat": "01:09", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "06:47", "berangkat": "06:50", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "0", "berangkat": "23:19", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "0", "berangkat": "16:37", "keterangan": "" },
+    { "klb": "KP/7037A Tambahan YK-GMR (YK-GMR)", "datang": "18:43", "berangkat": "18:45", "keterangan": "" },
+    { "klb": "KP/7038A Tambahan YK-GMR (GMR-YK)", "datang": "0", "berangkat": "13:20", "keterangan": "" }
   ],
   "[SENTOLO]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "0", "berangkat": "13:10", "keterangan": "" },
@@ -847,7 +877,13 @@
     { "ka": "567 Bandara YIA (YK-YIA)", "datang": "0", "berangkat": "16:04", "keterangan": "" },
     { "ka": "568 Bandara YIA (YIA-YK)", "datang": "0", "berangkat": "17:24", "keterangan": "" },
     { "ka": "569 Bandara YIA (YK-YIA)", "datang": "0", "berangkat": "18:40", "keterangan": "" },
-    { "ka": "570 Bandara YIA (YIA-YK)", "datang": "0", "berangkat": "20:10", "keterangan": "" }
+    { "ka": "570 Bandara YIA (YIA-YK)", "datang": "0", "berangkat": "20:10", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "0", "berangkat": "01:01", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "0", "berangkat": "06:59", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "0", "berangkat": "23:11", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "0", "berangkat": "16:45", "keterangan": "" },
+    { "klb": "KP/7037A Tambahan YK-GMR (YK-GMR)", "datang": "0", "berangkat": "18:34", "keterangan": "" },
+    { "klb": "KP/7038A Tambahan YK-GMR (GMR-YK)", "datang": "0", "berangkat": "13:28", "keterangan": "" }
   ],
   "[REWULU]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "0", "berangkat": "13:04", "keterangan": "" },
@@ -1009,7 +1045,13 @@
     { "ka": "567 Bandara YIA (YK-YIA)", "datang": "0", "berangkat": "15:57", "keterangan": "" },
     { "ka": "568 Bandara YIA (YIA-YK)", "datang": "0", "berangkat": "17:31", "keterangan": "" },
     { "ka": "569 Bandara YIA (YK-YIA)", "datang": "0", "berangkat": "18:33", "keterangan": "" },
-    { "ka": "570 Bandara YIA (YIA-YK)", "datang": "0", "berangkat": "20:17", "keterangan": "" }
+    { "ka": "570 Bandara YIA (YIA-YK)", "datang": "0", "berangkat": "20:17", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "0", "berangkat": "00:53", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "0", "berangkat": "07:06", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "0", "berangkat": "23:04", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "0", "berangkat": "16:53", "keterangan": "" },
+    { "klb": "KP/7037A Tambahan YK-GMR (YK-GMR)", "datang": "0", "berangkat": "18:28", "keterangan": "" },
+    { "klb": "KP/7038A Tambahan YK-GMR (GMR-YK)", "datang": "0", "berangkat": "13:34", "keterangan": "" }
   ],
   "[PATUKAN]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "0", "berangkat": "13:01", "keterangan": "" },
@@ -1169,7 +1211,13 @@
     { "ka": "567 Bandara YIA (YK-YIA)", "datang": "0", "berangkat": "15:54", "keterangan": "" },
     { "ka": "568 Bandara YIA (YIA-YK)", "datang": "0", "berangkat": "17:34", "keterangan": "" },
     { "ka": "569 Bandara YIA (YK-YIA)", "datang": "0", "berangkat": "18:30", "keterangan": "" },
-    { "ka": "570 Bandara YIA (YIA-YK)", "datang": "0", "berangkat": "20:20", "keterangan": "" }
+    { "ka": "570 Bandara YIA (YIA-YK)", "datang": "0", "berangkat": "20:20", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "0", "berangkat": "00:50", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "0", "berangkat": "07:11", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "0", "berangkat": "23:01", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "0", "berangkat": "16:57", "keterangan": "" },
+    { "klb": "KP/7037A Tambahan YK-GMR (YK-GMR)", "datang": "0", "berangkat": "18:25", "keterangan": "" },
+    { "klb": "KP/7038A Tambahan YK-GMR (GMR-YK)", "datang": "0", "berangkat": "13:37", "keterangan": "" }
   ],
   "[YOGYAKARTA]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "12:51", "berangkat": "12:56", "keterangan": "" },
@@ -1366,7 +1414,13 @@
     { "ka": "727 CL Yogyakarta (PL-YK)", "datang": "19:25", "berangkat": "-", "keterangan": "" },
     { "ka": "728 CL Yogyakarta (YK-PL)", "datang": "-", "berangkat": "20:15", "keterangan": "" },
     { "ka": "730F CL Yogyakarta (YK-PL)", "datang": "-", "berangkat": "06:00", "keterangan": "" },
-    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "12:41", "berangkat": "-", "keterangan": "" }
+    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "12:41", "berangkat": "-", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "00:40", "berangkat": "00:45", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "07:16", "berangkat": "07:26", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "22:51", "berangkat": "22:56", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "17:02", "berangkat": "17:07", "keterangan": "" },
+    { "klb": "KP/7037A Tambahan YK-GMR (YK-GMR)", "datang": "-", "berangkat": "18:20", "keterangan": "" },
+    { "klb": "KP/7038A Tambahan YK-GMR (GMR-YK)", "datang": "13:42", "berangkat": "-", "keterangan": "" }
   ],
   "[LEMPUYANGAN]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "0", "berangkat": "12:48", "keterangan": "" },
@@ -1493,7 +1547,11 @@
     { "ka": "727 CL Yogyakarta (PL-YK)", "datang": "19:20", "berangkat": "19:21", "keterangan": "" },
     { "ka": "728 CL Yogyakarta (YK-PL)", "datang": "20:19", "berangkat": "20:20", "keterangan": "" },
     { "ka": "730F CL Yogyakarta (YK-PL)", "datang": "06:04", "berangkat": "06:06", "keterangan": "" },
-    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "12:35", "berangkat": "12:37", "keterangan": "" }
+    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "12:35", "berangkat": "12:37", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "0", "berangkat": "00:36", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "0", "berangkat": "07:30", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "0", "berangkat": "22:47", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "0", "berangkat": "17:11", "keterangan": "" }
   ],
   "[MAGUWO]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "0", "berangkat": "12:44", "keterangan": "" },
@@ -1612,7 +1670,11 @@
     { "ka": "727 CL Yogyakarta (PL-YK)", "datang": "19:13", "berangkat": "19:14", "keterangan": "" },
     { "ka": "728 CL Yogyakarta (YK-PL)", "datang": "20:26", "berangkat": "20:27", "keterangan": "" },
     { "ka": "730F CL Yogyakarta (YK-PL)", "datang": "06:12", "berangkat": "06:13", "keterangan": "" },
-    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "12:27", "berangkat": "12:28", "keterangan": "" }
+    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "12:27", "berangkat": "12:28", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "0", "berangkat": "00:30", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "0", "berangkat": "07:36", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "0", "berangkat": "22:42", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "0", "berangkat": "17:17", "keterangan": "" }
   ],
   "[BRAMBANAN]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "0", "berangkat": "12:39", "keterangan": "" },
@@ -1735,7 +1797,11 @@
     { "ka": "727 CL Yogyakarta (PL-YK)", "datang": "19:05", "berangkat": "19:06", "keterangan": "" },
     { "ka": "728 CL Yogyakarta (YK-PL)", "datang": "20:35", "berangkat": "20:36", "keterangan": "" },
     { "ka": "730F CL Yogyakarta (YK-PL)", "datang": "06:20", "berangkat": "06:21", "keterangan": "" },
-    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "12:18", "berangkat": "12:19", "keterangan": "" }
+    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "12:18", "berangkat": "12:19", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "0", "berangkat": "00:25", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "0", "berangkat": "07:42", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "0", "berangkat": "22:36", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "0", "berangkat": "17:23", "keterangan": "" }
   ],
   "[SROWOT]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "0", "berangkat": "12:36", "keterangan": "" },
@@ -1858,7 +1924,11 @@
     { "ka": "727 CL Yogyakarta (PL-YK)", "datang": "18:59", "berangkat": "19:00", "keterangan": "" },
     { "ka": "728 CL Yogyakarta (YK-PL)", "datang": "20:42", "berangkat": "20:43", "keterangan": "" },
     { "ka": "730F CL Yogyakarta (YK-PL)", "datang": "06:27", "berangkat": "06:28", "keterangan": "" },
-    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "12:11", "berangkat": "12:12", "keterangan": "" }
+    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "12:11", "berangkat": "12:12", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "0", "berangkat": "00:21", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "0", "berangkat": "07:46", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "0", "berangkat": "22:32", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "0", "berangkat": "17:27", "keterangan": "" }
   ],
   "[KLATEN]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "0", "berangkat": "12:32", "keterangan": "// KA 235F Sancaka Utara (SLO-CP)" },
@@ -1981,7 +2051,11 @@
     { "ka": "727 CL Yogyakarta (PL-YK)", "datang": "18:52", "berangkat": "18:53", "keterangan": "" },
     { "ka": "728 CL Yogyakarta (YK-PL)", "datang": "20:49", "berangkat": "20:50", "keterangan": "" },
     { "ka": "730F CL Yogyakarta (YK-PL)", "datang": "06:34", "berangkat": "06:35", "keterangan": "" },
-    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "12:04", "berangkat": "12:05", "keterangan": "" }
+    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "12:04", "berangkat": "12:05", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "00:13", "berangkat": "00:15", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "07:52", "berangkat": "07:55", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "22:24", "berangkat": "22:26", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "17:33", "berangkat": "17:35", "keterangan": "" }
   ],
   "[CEPER]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "0", "berangkat": "12:27", "keterangan": "" },
@@ -2104,7 +2178,11 @@
     { "ka": "727 CL Yogyakarta (PL-YK)", "datang": "18:43", "berangkat": "18:44", "keterangan": "" },
     { "ka": "728 CL Yogyakarta (YK-PL)", "datang": "20:58", "berangkat": "20:59", "keterangan": "" },
     { "ka": "730F CL Yogyakarta (YK-PL)", "datang": "06:43", "berangkat": "06:44", "keterangan": "" },
-    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "11:55", "berangkat": "11:56", "keterangan": "" }
+    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "11:55", "berangkat": "11:56", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "0", "berangkat": "00:06", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "0", "berangkat": "08:03", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "0", "berangkat": "22:17", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "0", "berangkat": "17:43", "keterangan": "" }
   ],
   "[DELANGGU]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "0", "berangkat": "12:23", "keterangan": "" },
@@ -2225,7 +2303,11 @@
     { "ka": "727 CL Yogyakarta (PL-YK)", "datang": "18:36", "berangkat": "18:37", "keterangan": "" },
     { "ka": "728 CL Yogyakarta (YK-PL)", "datang": "21:05", "berangkat": "21:06", "keterangan": "" },
     { "ka": "730F CL Yogyakarta (YK-PL)", "datang": "06:50", "berangkat": "06:51", "keterangan": "" },
-    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "11:48", "berangkat": "11:49", "keterangan": "" }
+    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "11:48", "berangkat": "11:49", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "0", "berangkat": "00:02", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "0", "berangkat": "08:07", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "0", "berangkat": "22:13", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "0", "berangkat": "17:47", "keterangan": "" }
   ],
   "[GAWOK]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "0", "berangkat": "12:19", "keterangan": "" },
@@ -2346,7 +2428,11 @@
     { "ka": "727 CL Yogyakarta (PL-YK)", "datang": "18:30", "berangkat": "18:31", "keterangan": "" },
     { "ka": "728 CL Yogyakarta (YK-PL)", "datang": "21:11", "berangkat": "21:12", "keterangan": "" },
     { "ka": "730F CL Yogyakarta (YK-PL)", "datang": "06:56", "berangkat": "06:57", "keterangan": "" },
-    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "11:30", "berangkat": "11:42", "keterangan": "= KA 9 Argo Wilis (SGU-BD)" }
+    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "11:30", "berangkat": "11:42", "keterangan": "= KA 9 Argo Wilis (SGU-BD)" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "0", "berangkat": "23:58", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "0", "berangkat": "08:11", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "0", "berangkat": "22:09", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "0", "berangkat": "17:51", "keterangan": "" }
   ],
   "[PURWOSARI]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "0", "berangkat": "12:15", "keterangan": "" },
@@ -2467,7 +2553,11 @@
     { "ka": "727 CL Yogyakarta (PL-YK)", "datang": "18:23", "berangkat": "18:24", "keterangan": "" },
     { "ka": "728 CL Yogyakarta (YK-PL)", "datang": "21:18", "berangkat": "21:19", "keterangan": "" },
     { "ka": "730F CL Yogyakarta (YK-PL)", "datang": "07:03", "berangkat": "07:04", "keterangan": "" },
-    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "11:23", "berangkat": "11:24", "keterangan": "" }
+    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "11:23", "berangkat": "11:24", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "0", "berangkat": "23:53", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "0", "berangkat": "08:15", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "0", "berangkat": "22:04", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "0", "berangkat": "17:55", "keterangan": "" }
   ],
   "[SOLO]": [
     { "ka": "5 Argo Semeru (SGU-GMR)", "datang": "12:08", "berangkat": "12:11", "keterangan": "" },
@@ -2586,6 +2676,10 @@
     { "ka": "727 CL Yogyakarta (PL-YK)", "datang": "18:15", "berangkat": "18:19", "keterangan": "" },
     { "ka": "728 CL Yogyakarta (YK-PL)", "datang": "21:23", "berangkat": "21:28", "keterangan": "" },
     { "ka": "730F CL Yogyakarta (YK-PL)", "datang": "07:08", "berangkat": "07:10", "keterangan": "" },
-    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "11:17", "berangkat": "11:19", "keterangan": "" }
+    { "ka": "733F CL Yogyakarta (PL-YK)", "datang": "11:17", "berangkat": "11:19", "keterangan": "" },
+    { "plb": "7001A Gajayana Tambahan (ML-GMR)", "datang": "23:39", "berangkat": "23:48", "keterangan": "" },
+    { "plb": "7002B Gajayana Tambahan (GMR-ML)", "datang": "08:20", "berangkat": "08:27", "keterangan": "" },
+    { "plb": "7005 Batavia (SLO-GMR)", "datang": "-", "berangkat": "22:00", "keterangan": "" },
+    { "plb": "7006 Batavia (GMR-SLO)", "datang": "18:00", "berangkat": "-", "keterangan": "" }
   ]
 }

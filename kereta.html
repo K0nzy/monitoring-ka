@@ -34,11 +34,7 @@
       flex-wrap: wrap;
     }
 
-    #tanggal-sekarang {
-      font-size: 40px;
-      font-weight: bold;
-    }
-
+    #tanggal-sekarang,
     #jam-sekarang {
       font-size: 40px;
       font-weight: bold;
@@ -92,77 +88,33 @@
     }
 
     @keyframes slideInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-        visibility: visible;
-      }
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); visibility: visible; }
     }
 
     @keyframes slideOutDown {
-      from {
-        opacity: 1;
-        transform: translateY(0);
-        visibility: visible;
-      }
-      to {
-        opacity: 0;
-        transform: translateY(30px);
-        visibility: hidden;
-      }
+      from { opacity: 1; transform: translateY(0); visibility: visible; }
+      to   { opacity: 0; transform: translateY(30px); visibility: hidden; }
     }
 
-    .fade-in {
-      animation: slideInUp 0.6s ease forwards;
-    }
-
-    .fade-out {
-      animation: slideOutDown 0.6s ease forwards;
-    }
+    .fade-in { animation: slideInUp 0.6s ease forwards; }
+    .fade-out { animation: slideOutDown 0.6s ease forwards; }
 
     @media (max-width: 600px) {
-      .notifikasi {
-        font-size: 16px;
-        padding: 12px 16px;
-      }
-
-      .keterangan {
-        font-size: 14px;
-      }
+      .notifikasi { font-size: 16px; padding: 12px 16px; }
+      .keterangan { font-size: 14px; }
     }
 
     @media (prefers-color-scheme: dark) {
       body, html {
-        background: #000000;
-        color: #ffffff;
+        background: #000;
+        color: #fff;
       }
-
-      h1 {
-        color: #4dabff;
-      }
-
-      .datang {
-        border-left-color: #ff6b6b;
-        background-color: #3a1e1e;
-      }
-
-      .berangkat {
-        border-left-color: #4cd964;
-        background-color: #1e3a2a;
-      }
-
-      .langsung {
-        border-left-color: #0a84ff;
-        background-color: #1e2e3a;
-      }
-
-      .keterangan {
-        color: #cccccc;
-      }
+      h1 { color: #4dabff; }
+      .datang { border-left-color: #ff6b6b; background-color: #3a1e1e; }
+      .berangkat { border-left-color: #4cd964; background-color: #1e3a2a; }
+      .langsung { border-left-color: #0a84ff; background-color: #1e2e3a; }
+      .keterangan { color: #ccc; }
     }
   </style>
 </head>
@@ -194,8 +146,18 @@
     function tampilkanTanggal() {
       const now = new Date();
       const opsiTanggal = { day: 'numeric', month: 'long', year: 'numeric' };
-      const tanggalFormatted = now.toLocaleDateString('id-ID', opsiTanggal);
-      document.getElementById("tanggal-sekarang").textContent = tanggalFormatted;
+      document.getElementById("tanggal-sekarang").textContent =
+        now.toLocaleDateString('id-ID', opsiTanggal);
+    }
+
+    function ambilNamaKereta(item) {
+      return item.ka || item.plb || item.klb || "??";
+    }
+
+    function ambilLabelJenis(item) {
+      if (item.plb) return "PLB";
+      if (item.klb) return "KLB";
+      return "KA";
     }
 
     function tampilkanBatch(batch) {
@@ -246,13 +208,14 @@
       const jam = now.getHours();
       const menit = now.getMinutes();
       const detik = now.getSeconds();
-
       if (detik !== 0) return;
 
       const batch = [];
 
       for (const [stasiun, jadwalList] of Object.entries(semuaData)) {
         jadwalList.forEach(item => {
+          const namaKereta = ambilNamaKereta(item);
+          const label = ambilLabelJenis(item);
           const datangLangsung = item.datang === "0";
           const datangValid = item.datang !== "-" && item.datang !== "0";
           const berangkatValid = item.berangkat !== "-";
@@ -260,34 +223,34 @@
           const [jamD, menitD] = datangValid ? item.datang.split(/[:.]/).map(Number) : [null, null];
           const [jamB, menitB] = berangkatValid ? item.berangkat.split(/[:.]/).map(Number) : [null, null];
 
-          const kunciDatang = `${stasiun}-${item.ka}-datang`;
-          const kunciBerangkat = `${stasiun}-${item.ka}-berangkat`;
-          const kunciLangsung = `${stasiun}-${item.ka}-langsung`;
+          const kunciDatang = `${stasiun}-${namaKereta}-datang`;
+          const kunciBerangkat = `${stasiun}-${namaKereta}-berangkat`;
+          const kunciLangsung = `${stasiun}-${namaKereta}-langsung`;
 
           if (datangValid && jam === jamD && menit === menitD && !sudahTampil.has(kunciDatang)) {
             sudahTampil.add(kunciDatang);
             batch.push({
-              pesan: `⬇️ ${stasiun} KA ${item.ka} <i>datang</i> ${item.datang}`,
+              pesan: `⬇️ ${stasiun} ${label} ${namaKereta} <i>datang</i> ${item.datang}`,
               tipe: "datang",
-              keterangan: item.keterangan || "",
+              keterangan: item.keterangan || ""
             });
           }
 
           if (datangLangsung && berangkatValid && jam === jamB && menit === menitB && !sudahTampil.has(kunciLangsung)) {
             sudahTampil.add(kunciLangsung);
             batch.push({
-              pesan: `➡️ ${stasiun} KA ${item.ka} <i>langsung</i> ${item.berangkat}`,
+              pesan: `➡️ ${stasiun} ${label} ${namaKereta} <i>langsung</i> ${item.berangkat}`,
               tipe: "langsung",
-              keterangan: item.keterangan || "",
+              keterangan: item.keterangan || ""
             });
           }
 
           if (!datangLangsung && berangkatValid && jam === jamB && menit === menitB && !sudahTampil.has(kunciBerangkat)) {
             sudahTampil.add(kunciBerangkat);
             batch.push({
-              pesan: `⬆️ ${stasiun} KA ${item.ka} <i>berangkat</i> ${item.berangkat}`,
+              pesan: `⬆️ ${stasiun} ${label} ${namaKereta} <i>berangkat</i> ${item.berangkat}`,
               tipe: "berangkat",
-              keterangan: item.keterangan || "",
+              keterangan: item.keterangan || ""
             });
           }
         });
@@ -307,11 +270,12 @@
       const jam = now.getHours();
       const menit = now.getMinutes();
       const detik = now.getSeconds();
-
       const batch = [];
 
       for (const [stasiun, jadwalList] of Object.entries(semuaData)) {
         jadwalList.forEach(item => {
+          const namaKereta = ambilNamaKereta(item);
+          const label = ambilLabelJenis(item);
           const datangLangsung = item.datang === "0";
           const datangValid = item.datang !== "-" && item.datang !== "0";
           const berangkatValid = item.berangkat !== "-";
@@ -319,34 +283,34 @@
           const [jamD, menitD] = datangValid ? item.datang.split(/[:.]/).map(Number) : [null, null];
           const [jamB, menitB] = berangkatValid ? item.berangkat.split(/[:.]/).map(Number) : [null, null];
 
-          const kunciDatang = `${stasiun}-${item.ka}-datang`;
-          const kunciBerangkat = `${stasiun}-${item.ka}-berangkat`;
-          const kunciLangsung = `${stasiun}-${item.ka}-langsung`;
+          const kunciDatang = `${stasiun}-${namaKereta}-datang`;
+          const kunciBerangkat = `${stasiun}-${namaKereta}-berangkat`;
+          const kunciLangsung = `${stasiun}-${namaKereta}-langsung`;
 
           if (datangValid && jam === jamD && menit === menitD && detik < 59 && !sudahTampil.has(kunciDatang)) {
             sudahTampil.add(kunciDatang);
             batch.push({
-              pesan: `⬇️ ${stasiun} KA ${item.ka} <i>datang</i> ${item.datang}`,
+              pesan: `⬇️ ${stasiun} ${label} ${namaKereta} <i>datang</i> ${item.datang}`,
               tipe: "datang",
-              keterangan: item.keterangan || "",
+              keterangan: item.keterangan || ""
             });
           }
 
           if (datangLangsung && berangkatValid && jam === jamB && menit === menitB && detik < 59 && !sudahTampil.has(kunciLangsung)) {
             sudahTampil.add(kunciLangsung);
             batch.push({
-              pesan: `➡️ ${stasiun} KA ${item.ka} <i>langsung</i> ${item.berangkat}`,
+              pesan: `➡️ ${stasiun} ${label} ${namaKereta} <i>langsung</i> ${item.berangkat}`,
               tipe: "langsung",
-              keterangan: item.keterangan || "",
+              keterangan: item.keterangan || ""
             });
           }
 
           if (!datangLangsung && berangkatValid && jam === jamB && menit === menitB && detik < 59 && !sudahTampil.has(kunciBerangkat)) {
             sudahTampil.add(kunciBerangkat);
             batch.push({
-              pesan: `⬆️ ${stasiun} KA ${item.ka} <i>berangkat</i> ${item.berangkat}`,
+              pesan: `⬆️ ${stasiun} ${label} ${namaKereta} <i>berangkat</i> ${item.berangkat}`,
               tipe: "berangkat",
-              keterangan: item.keterangan || "",
+              keterangan: item.keterangan || ""
             });
           }
         });
@@ -373,7 +337,6 @@
         setInterval(() => {
           tampilkanTanggal();
         }, 60000);
-
       } catch (err) {
         console.error("Gagal memuat jadwal:", err);
       }
